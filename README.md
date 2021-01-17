@@ -93,8 +93,10 @@ The resulting errorbars are summarized in Figure 4.
 
 ###### Figure 4: Errorbars of all trials
 
+### Installation
 
-### Dependencies
+
+#### Dependencies
 - Module _neuralnl_ is dependent on package _neurolab_ [[NLB15]](https://github.com/dwweiss/grayboxes/wiki/References#nlb15)
 - Module _neuraltf_ is dependent on package _tensorflow_ [[ABA15]](https://github.com/dwweiss/grayboxes/wiki/References#aba15)
 
@@ -102,7 +104,7 @@ One way of installation of the needed packages is:
 
     pip install tensorflow neurolab matplotlib numpy
 
-#### Installation
+#### Run example
 
 If the downloaded zip-file _bruteforce-main.zip_ is extracted in a local directory, the example file _test_bruteforce.py_ can be directly excuted in the _bruteforce_ sub-directory:
 
