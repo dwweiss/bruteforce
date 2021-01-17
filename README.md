@@ -7,7 +7,7 @@ Brute force scanning of optimal configurations of neural networks.
 Optimal parameters of neural networks can be difficult to estimate from theoretical considerations. It is mathematically proven that neural networks work effectively for many regression problems.
 However, algorithmic instructions for finding the optimal network configuration are often not available. Besides, more than one optimal network structure ensure sufficient model performance. 
 
-Therefore an automatic configuration of network parameters is desired. This covers variations of the number and size of hidden layers, the activation functions of hidden and output layers, parameters of early stopping of the training or of deacy of weights, and the effect of random initialization of the network weights.   
+Therefore an automatic configuration of network parameters is proposed. This covers variations of the number and size of hidden layers, the activation functions of hidden and output layers, parameters of early stopping of the training or of deacy of weights, the effect of random initialization of the network weights etc.   
 
 ### Options for finding the optimal configuration
 - Brute force scanning of network parameter space (slow, but transparent) 
