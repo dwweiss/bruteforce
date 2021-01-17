@@ -93,11 +93,11 @@ In Figure 4 the history of the five best trials out of all trials plotted in Fig
 ###### Figure 4: Mean squared error history of five best trials
 
 
-The resulting errorbars are summarized in Figure 4. 
+The resulting errorbars are summarized in Figure 5. 
 
 ![MSE_history_all](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_errorbars1.png)
 
-###### Figure 4: Errorbars of all trials
+###### Figure 5: Errorbars of all trials
 
 
 ### Installation
