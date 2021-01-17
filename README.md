@@ -102,6 +102,8 @@ One way of installation of the needed packages is:
 
     pip install tensorflow neurolab matplotlib numpy
 
+#### Installation
+
 If the downloaded zip-file _bruteforce-main.zip_ is extracted in a local directory, the example file _test_bruteforce.py_ can be directly excuted in the _bruteforce_ sub-directory:
 
     bruteforce-main > bruteforce > python test_bruteforce.py
