@@ -31,5 +31,6 @@ test_bruteforce.py is an example for using the backends TensorFlow and NeuroLab 
 - Module _neuraltf_ is dependent on package _tensorflow_ [[ABA15]](https://github.com/dwweiss/grayboxes/wiki/References#aba15)
 
 Installation of the packages needed can be done with: 
+
     pip install tensorflow neurolab matplotlib numpy
 
