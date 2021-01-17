@@ -17,14 +17,14 @@ parameters of early stopping of the training or of deacy of weights, and the eff
 Due to its explicit transparency and robust implementation, brute force scanning has been implemented. The exhaustive search relies merely on guessing wide parameter ranges and eliminates the risk of getting trapped in local optima.
 
 ### Implementation
-bruteforce.py provides nested search loops over selected parameter ranges. The choice of the best configuration is based on the mean squared error, see metrics.py.
-BruteForce uses different backends (e.g. TensorFlow, NeuroLab). The library specific functions are implemented in the children of class BruteForce:
-- Class NeuralTf: Tensorflow/Keras variant
-- Class NeuralNl: Neurolab variant
-BruteForce is only dependent on the files stored in the code directory of this repository.
+_bruteforce.py_ provides nested search loops over selected parameter ranges. The choice of the best configuration is based on the mean squared error, see metrics.py.
+_BruteForce_ uses different backends (e.g. TensorFlow, NeuroLab). The library specific functions are implemented in the children of class BruteForce:
+- Class _NeuralTf_: Tensorflow/Keras variant
+- Class _NeuralNl_: Neurolab variant
+_BruteForce_ is only dependent on the files stored in the code directory of this repository.
 
 ### Example
-test_bruteforce.py is an example for using the backends TensorFlow and NeuroLab for a simple regression problem in 1D space.  
+_test_bruteforce.py_ is an example for using the backends TensorFlow and NeuroLab for a simple regression problem in 1D space.  
 
         N = 1000                # number of training sets
         n = np.round(1.4 * N)  # number of test sets
@@ -95,5 +95,5 @@ One way of installation of the needed packages is:
 
     pip install tensorflow neurolab matplotlib numpy
 
-If the code of brute force is copied to a local directory, the test file test_bruteforce.py can be directly excuted in that directory.  
+If the code of brute force is copied to a local directory, the test file _test_bruteforce.py_ can be directly excuted in that directory.  
 
