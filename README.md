@@ -70,7 +70,7 @@ test_bruteforce.py is an example for using the backends TensorFlow and NeuroLab 
 The training data and the true values are plotted in Figure 1.
 Figure 2 shows the history of the means squared error of all trials for the TensorFlow backend. In Figure 3 the history of the five best trials out of all trials plotted in Figure 2 is shown. The resulting errorbars are summarized in Figure 4. 
 
-![history_all](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_train_and_true.png)
+![train_and_true](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_train_and_true1.png)
 
 ###### Figure 1: Training data and true values without noise
 
