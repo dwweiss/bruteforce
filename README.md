@@ -66,11 +66,19 @@ test_bruteforce.py is an example for using the backends TensorFlow and NeuroLab 
                 )
 
 #### Results
-![history_all](https://github.com/dwweiss/bruteforce/blob/master/doc/fig/bruteforce_history1_all.png)
+https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_errorbars1.png
 
-![history_5best](https://github.com/dwweiss/bruteforce/blob/master/doc/fig/bruteforce_history1_5best.png)
+![history_all](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_history1_all.png)
 
-![MSE_history_all](https://github.com/dwweiss/bruteforce/blob/master/doc/fig/bruteforce_errorbars1.png)
+###### Figure 1: Mean squared error history of all trials
+
+![history_5best](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_history1_5best.png)
+
+###### Figure 2: Mean squared error history of five best trials
+
+![MSE_history_all](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_errorbars1.png)
+
+###### Figure 3: Error bars of all trials
 
 
 ### Dependencies
