@@ -18,8 +18,6 @@ Due to its explicit transparency and robust implementation, brute force scanning
 ### Implementation
 Class _BruteForce_ in module _bruteforce_ performes nested search loops over selected parameter ranges. 
 
-<img src="https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/brute_force_loops.PNG"
-alt="IMAGE ALT TEXT HERE" width="300" height="100" border="10" />
 
 ![loops](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/brute_force_loops.PNG)
 
