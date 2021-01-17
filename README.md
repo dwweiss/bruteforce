@@ -74,6 +74,7 @@ The training data and the true values are plotted in Figure 1.
 
 <br>
 Figure 2 shows the history of the means squared error of all trials for the TensorFlow backend. 
+<br>
 
 ![history_all](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_history1_all.png)
 
@@ -81,6 +82,7 @@ Figure 2 shows the history of the means squared error of all trials for the Tens
 
 <br>
 In Figure 3 the history of the five best trials out of all trials plotted in Figure 2 is shown. 
+<br>
 
 ![history_5best](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_history1_5best.png)
 
@@ -88,6 +90,7 @@ In Figure 3 the history of the five best trials out of all trials plotted in Fig
 
 <br>
 The resulting errorbars are summarized in Figure 4. 
+<br>
 
 ![MSE_history_all](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_errorbars1.png)
 
