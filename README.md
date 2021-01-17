@@ -16,10 +16,11 @@ Therefore an automatic configuration of network parameters is desired. This cove
 Due to its explicit transparency and robust implementation, brute force scanning has been implemented. The exhaustive search relies merely on guessing wide parameter ranges and eliminates the risk of getting trapped in local optima.
 
 ### Implementation
-Class _BruteForce_ in module _bruteforce.py_ provides nested search loops over selected parameter ranges. The choice of the best configuration is based on the mean squared error, see metrics.py.
+Class _BruteForce_ in module _bruteforce_ provides nested search loops over selected parameter ranges. The choice of the best configuration is based on the mean squared error, see metrics.py.
 _BruteForce_ uses different backends (e.g. TensorFlow, NeuroLab). The library specific functions are implemented in the children of class _BruteForce_:
 - Class _NeuralTf_: Tensorflow/Keras variant
 - Class _NeuralNl_: Neurolab variant
+
 _BruteForce_ is only dependent on the files stored in the code directory of this repository.
 
 ### Example
