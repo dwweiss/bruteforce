@@ -21,10 +21,15 @@ bruteforce.py provides nested search loops over selected parameter ranges. The c
 BruteForce uses different backends (e.g. TensorFlow, NeuroLab). The library specific functions are implemented in the children of class BruteForce:
 - Class NeuralTf: Tensorflow/Keras variant
 - Class NeuralNl: Neurolab variant
+BruteForce is only dependent on the files stored in the code directory of this repository.
 
+### Example
 test_bruteforce.py is an example for using the backends TensorFlow and NeuroLab for a simple regression problem in 1D space.  
 
 ### Dependencies
 - Module _neuralnl_ is dependent on package _neurolab_ [[NLB15]](https://github.com/dwweiss/grayboxes/wiki/References#nlb15)
 - Module _neuraltf_ is dependent on package _tensorflow_ [[ABA15]](https://github.com/dwweiss/grayboxes/wiki/References#aba15)
+
+Installation of the packages needed can be done with: 
+    pip install tensorflow neurolab matplotlib numpy
 
