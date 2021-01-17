@@ -18,7 +18,7 @@ Due to its explicit transparency and robust implementation, brute force scanning
 ### Implementation
 Class _BruteForce_ in module _bruteforce_ performes nested search loops over selected parameter ranges. 
 
-![loops](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_loops.png)
+![loops](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/brute_force_loops.png)
 
 The choice of the best configuration is based on the mean squared error, see module _metrics_.  _BruteForce_ uses different backends (e.g. TensorFlow, NeuroLab). The library specific functions are implemented in the children of class _BruteForce_:
 - Class _NeuralTf_: Tensorflow/Keras variant
