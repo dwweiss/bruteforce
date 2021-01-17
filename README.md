@@ -66,7 +66,8 @@ test_bruteforce.py is an example for using the backends TensorFlow and NeuroLab 
                 )
 
 #### Results
-https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_errorbars1.png
+
+Figure 1 shows the history of the means squared error of all trials for the TensorFlow backend. In Figure 2 the history of the five best trials out of all trials plotted in Figure 1 is shown. The resulting errorbars are summarized in Figure 3. 
 
 ![history_all](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_history1_all.png)
 
@@ -78,7 +79,7 @@ https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_er
 
 ![MSE_history_all](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_errorbars1.png)
 
-###### Figure 3: Error bars of all trials
+###### Figure 3: Errorbars of all trials
 
 
 ### Dependencies
@@ -88,4 +89,6 @@ https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_er
 One way of installation of the needed packages is: 
 
     pip install tensorflow neurolab matplotlib numpy
+
+If the code of brute force is copied to a local directory, the test file test_bruteforce.py can be directly excuted in that directory.  
 
