@@ -1,7 +1,7 @@
 # bruteforce
 
 ### Purpose
-Brute force scanning of configuration parameters of neural networks.
+Brute force scanning of optimal configuration parameters of neural networks.
 
 ### Motivation
 Optimal parameters of neural networks can be difficult to estimate from theoretical considerations. It is mathematically proven that neural networks work effectively for many regression problems.
