@@ -26,11 +26,58 @@ BruteForce is only dependent on the files stored in the code directory of this r
 ### Example
 test_bruteforce.py is an example for using the backends TensorFlow and NeuroLab for a simple regression problem in 1D space.  
 
+        N = 1000                # number of training sets
+        n = np.round(1.4 * N)  # number of test sets
+        nse = 5e-2             # noise relative to x-value
+        
+        X = np.linspace(-2. * np.pi, 2. * np.pi, N).reshape(-1, 1)
+        dx = 0.25 * (X.max() - X.min())
+        x = np.linspace(X.min() - dx, X.max() + dx, n).reshape(-1, 1)
+        Y_tru = np.sin(X)
+        Y = Y_tru + np.random.uniform(-nse, +nse, size=X.shape)
+        y_tru = np.sin(x)
+        
+        plt.title('train data & true values')
+        plt.plot(X, Y, label='train')
+        plt.plot(x, y_tru, label='true')
+        plt.legend(); plt.grid(); plt.show()
+        
+        for backend in [
+                #  NeuralNl, 
+                NeuralTf,
+                ]:
+            phi = backend()
+            y = phi(X=X, Y=Y, x=x,
+                activation=('leaky', 'elu',) 
+                    if phi._backend == 'tensorflow' else 'sigmoid',
+                epochs=150,
+                expected=1e-3 if phi._backend == 'tensorflow' else 1e-3,
+                learning_rate=0.1,            # tensorflow learning rate
+                neurons=[[i]*j for i in range(4, 4+1)       # i: neurons  
+                               for j in range(4, 4+1)],       # j: layer
+                output='linear',
+                patience=10,      # delay of tensorflow's eraly stopping
+                plot=1,           # 0: none, 1: final only, 2: all plots 
+                rr=0.1,                   # neurolab:bfgs regularization
+                show=1,
+                tolerated=5e-3,
+                trainer='adam' if phi._backend == 'tensorflow' else 'bfgs',
+                trials=5,   # repetition of every training configuration 
+                )
+
+#### Results
+![history_all](https://github.com/dwweiss/bruteforce/blob/master/doc/fig/bruteforce_history1_all.png)
+
+![history_5best](https://github.com/dwweiss/bruteforce/blob/master/doc/fig/bruteforce_history1_5best.png)
+
+![MSE_history_all](https://github.com/dwweiss/bruteforce/blob/master/doc/fig/bruteforce_errorbars1.png)
+
+
 ### Dependencies
 - Module _neuralnl_ is dependent on package _neurolab_ [[NLB15]](https://github.com/dwweiss/grayboxes/wiki/References#nlb15)
 - Module _neuraltf_ is dependent on package _tensorflow_ [[ABA15]](https://github.com/dwweiss/grayboxes/wiki/References#aba15)
 
-Installation of the packages needed can be done with: 
+One way of installation of the needed packages is: 
 
     pip install tensorflow neurolab matplotlib numpy
 
