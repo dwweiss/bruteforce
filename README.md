@@ -56,7 +56,7 @@ _test_bruteforce.py_ is an example for using the backends TensorFlow and NeuroLa
                 neurons=[[i]*j for i in range(4, 4+1)       # i: neurons  
                                for j in range(4, 4+1)],       # j: layer
                 output='linear',
-                patience=10,      # delay of tensorflow's eraly stopping
+                patience=10,      # delay of tensorflow's early stopping
                 plot=1,           # 0: none, 1: final only, 2: all plots 
                 rr=0.1,                   # neurolab:bfgs regularization
                 show=1,
