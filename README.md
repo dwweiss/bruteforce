@@ -1,4 +1,4 @@
-# bruteforce 
+# bruteforce  
 
 ### Purpose
 Brute force scanning of optimal configurations of neural networks.
