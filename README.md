@@ -99,8 +99,8 @@ The resulting errorbars are summarized in Figure 4.
 
 ###### Figure 4: Errorbars of all trials
 
-### Installation
 
+### Installation
 
 #### Dependencies
 - Module _neuralnl_ is dependent on package _neurolab_ [[NLB15]](https://github.com/dwweiss/grayboxes/wiki/References#nlb15)
