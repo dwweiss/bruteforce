@@ -16,7 +16,11 @@ Therefore an automatic configuration of network parameters is proposed. This cov
 Due to its explicit transparency and robust implementation, brute force scanning has been implemented. The exhaustive search relies merely on guessing wide parameter ranges and eliminates the risk of getting trapped in local optima.
 
 ### Implementation
-Class _BruteForce_ in module _bruteforce_ performes nested search loops over selected parameter ranges. The choice of the best configuration is based on the mean squared error, see module _metrics_.  _BruteForce_ uses different backends (e.g. TensorFlow, NeuroLab). The library specific functions are implemented in the children of class _BruteForce_:
+Class _BruteForce_ in module _bruteforce_ performes nested search loops over selected parameter ranges. 
+
+![loops](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_loops.png)
+
+The choice of the best configuration is based on the mean squared error, see module _metrics_.  _BruteForce_ uses different backends (e.g. TensorFlow, NeuroLab). The library specific functions are implemented in the children of class _BruteForce_:
 - Class _NeuralTf_: Tensorflow/Keras variant
 - Class _NeuralNl_: Neurolab variant
 
