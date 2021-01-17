@@ -18,8 +18,9 @@ Due to its explicit transparency and robust implementation, brute force scanning
 ### Implementation
 Class _BruteForce_ in module _bruteforce_ performes nested search loops over selected parameter ranges. 
 
-
 ![loops](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/brute_force_loops.PNG)
+
+###### Figure 1: Loops (MSE: mean squared error)
 
 The choice of the best configuration is based on the mean squared error, see module _metrics_.  _BruteForce_ uses different backends (e.g. TensorFlow, NeuroLab). The library specific functions are implemented in the children of class _BruteForce_:
 - Class _NeuralTf_: Tensorflow/Keras variant
@@ -71,25 +72,25 @@ _test_bruteforce.py_ is an example for using the backends TensorFlow and NeuroLa
 
 #### Results
 
-The training data and the true values are plotted in Figure 1.
+The training data and the true values are plotted in Figure 2.
 
 ![train_and_true](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_train_and_true1.png)
 
-###### Figure 1: Training data and true values without noise
+###### Figure 2: Training data and true values without noise
 
 
-Figure 2 shows the history of the means squared error of all trials for the TensorFlow backend. 
+Figure 3 shows the history of the means squared error of all trials for the TensorFlow backend. 
 
 ![history_all](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_history1_all.png)
 
-###### Figure 2: Mean squared error history of all trials
+###### Figure 3: Mean squared error history of all trials
 
 
-In Figure 3 the history of the five best trials out of all trials plotted in Figure 2 is shown. 
+In Figure 4 the history of the five best trials out of all trials plotted in Figure 3 is shown. 
 
 ![history_5best](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_history1_5best.png)
 
-###### Figure 3: Mean squared error history of five best trials
+###### Figure 4: Mean squared error history of five best trials
 
 
 The resulting errorbars are summarized in Figure 4. 
