@@ -94,5 +94,7 @@ One way of installation of the needed packages is:
 
     pip install tensorflow neurolab matplotlib numpy
 
-If the code of _bruteforce_ is copied to a local directory, the test file _test_bruteforce.py_ can be directly excuted in that directory.  
+If the code of _bruteforce_ is copied to a local directory, the example file _test_bruteforce.py_ can be directly excuted in that directory:
+
+    bruteforce>python test_bruteforce.py
 
