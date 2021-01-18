@@ -107,7 +107,7 @@ Therefore a required minimum number of 3 repetitions is advised. The summary of 
 
 One way of installation of the needed packages is: 
 
-    pip install tensorflow neurolab matplotlib numpy
+    pip install tensorflow neurolab matplotlib numpy pandas
 
 #### Run test
 
