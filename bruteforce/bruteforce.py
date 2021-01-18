@@ -123,6 +123,10 @@ class BruteForce(object):
         plt.rcParams.update({'font.size': 10})              # axis fonts
         plt.rcParams['legend.fontsize'] = 12           # fonts in legend
 
+    @property
+    def backend(self) -> Optional[str]:
+        return self._backend
+
     def _key_pressed(self, hot_key: Optional[str] = None) -> bool:
         """
         Detects if key of keybord is pressed
@@ -756,17 +760,17 @@ class BruteForce(object):
         if plot >= 1:
             n_best = 5
 
-            print('*** history of all trainings')
-            self._plot_all_trials(best_metrics, all_metrices)
-
             sorted_histories = sorted(all_metrices, reverse=False, 
                                       key=itemgetter('mse_trn'))    
-            print('*** history of best', n_best, 'trials')
-            self._plot_all_trials(best_metrics, sorted_histories[:n_best])
+
+            print('*** history of all trainings')
+            self._plot_all_trials(best_metrics, all_metrices)
+            if len(sorted_histories) > n_best:
+                print('*** history of best', n_best, 'trials')
+                self._plot_all_trials(best_metrics, sorted_histories[:n_best])
             
-            self._plot_err_bars(best_metrics, sorted_histories[:n_best])
-            
-            if len(all_metrices) > n_best:
+            self._plot_err_bars(best_metrics, sorted_histories[:n_best])            
+            if len(sorted_histories) > n_best:
                 self._plot_err_bars(best_metrics, sorted_histories)
                 
         if plot >= 1:

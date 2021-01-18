@@ -76,17 +76,17 @@ class Neural(BruteForce):
         super().__init__(f=f)
         self._backend = 'tensorflow'
         
-    def n_inp(self) -> Optional[int]:
-        """
-        See super().n_inp()
-        """        
-        if not self.ready:
-            return None
-        
-        n_inp_ = self._net.input[self._net.input.value_index].shape[0]
-        assert n_inp_ == super().n_inp(), str(n_inp_)
-
-        return n_inp_
+#    def n_inp(self) -> Optional[int]:
+#        """
+#        See super().n_inp()
+#        """        
+#        if not self.ready:
+#            return None
+#        
+#        n_inp_ = self._net.input[self._net.input.value_index].shape[0]
+#        assert n_inp_ == super().n_inp(), str(n_inp_)
+#
+#        return n_inp_
 
     def _create_net(self, 
                     n_inp: int, 
