@@ -63,14 +63,14 @@ class TestUM(unittest.TestCase):
         
         plt.title('train data & true values')
         plt.plot(X, Y, label='train')
-        plt.plot(x, y_tru, label='true')
+        plt.plot(x, y_tru, ':', label='true')
         plt.legend(); plt.grid(); plt.show()
         
-        for class_ in [
+        for backend in [
 #                NeuralNl, 
                 NeuralTf,
                 ]:
-            phi = class_()
+            phi = backend()
             y = phi(X=X, Y=Y, x=x,
                 activation=('leaky', 'elu',) 
                     if phi._backend == 'tensorflow' else 'sigmoid',
@@ -79,12 +79,12 @@ class TestUM(unittest.TestCase):
                 learning_rate=0.1,            # tensorflow learning rate
                 neurons=[[i]*j for i in range(4, 4+1)       # i: neurons  
                                for j in range(4, 4+1)],       # j: layer
-                output='linear',
-                patience=10,      # delay of tensorflow's eraly stopping
+                output='linear',   # activation function of output layer
+                patience=10,      # delay of tensorflow's early stopping
                 plot=1,           # 0: none, 1: final only, 2: all plots 
                 rr=0.1,                   # neurolab:bfgs regularization
                 show=1,
-                tolerated=5e-3,
+                tolerated=5e-3,                          # tolerated MSE
                 trainer='adam' if phi._backend == 'tensorflow' else 'bfgs',
                 trials=5,   # repetition of every training configuration 
                 )
@@ -92,7 +92,13 @@ class TestUM(unittest.TestCase):
             if y is None:
                 print('??? y is None -> training failed')
             
-        self.assertTrue(True)
+        plt.title('train and prediction data')
+        plt.plot(X, Y, label='train')
+        plt.plot(x, y_tru, ':', label='true')
+        plt.plot(x, y, label='pred')
+        plt.legend(); plt.grid(); plt.show()
+
+        self.assertIsNotNone(y)
 
 
 if __name__ == '__main__':
