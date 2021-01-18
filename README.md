@@ -41,12 +41,7 @@ _test_bruteforce.py_ is an example for using the backends TensorFlow and NeuroLa
         Y_tru = np.sin(X)
         Y = Y_tru + np.random.uniform(-nse, +nse, size=X.shape)
         y_tru = np.sin(x)
-        
-        plt.title('train data & true values')
-        plt.plot(X, Y, label='train')
-        plt.plot(x, y_tru, label='true')
-        plt.legend(); plt.grid(); plt.show()
-        
+                
         for backend in [
                 #  NeuralNl, 
                 NeuralTf,
@@ -54,9 +49,9 @@ _test_bruteforce.py_ is an example for using the backends TensorFlow and NeuroLa
             phi = backend()
             y = phi(X=X, Y=Y, x=x,
                 activation=('leaky', 'elu',) 
-                    if phi._backend == 'tensorflow' else 'sigmoid',
+                    if phi.backend == 'tensorflow' else 'sigmoid',
                 epochs=150,
-                expected=1e-3 if phi._backend == 'tensorflow' else 1e-3,
+                expected=1e-3 if phi.backend == 'tensorflow' else 1e-3,
                 learning_rate=0.1,            # tensorflow learning rate
                 neurons=[[i]*j for i in range(4, 4+1)       # i: neurons  
                                for j in range(4, 4+1)],       # j: layer
@@ -66,7 +61,7 @@ _test_bruteforce.py_ is an example for using the backends TensorFlow and NeuroLa
                 rr=0.1,                   # neurolab:bfgs regularization
                 show=1,
                 tolerated=5e-3,
-                trainer='adam' if phi._backend == 'tensorflow' else 'bfgs',
+                trainer='adam' if phi.backend == 'tensorflow' else 'bfgs',
                 trials=5,   # repetition of every training configuration 
                 )
 
