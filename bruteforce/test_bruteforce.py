@@ -92,7 +92,7 @@ class TestUM(unittest.TestCase):
                 print('??? y is None -> training failed')
             
         plt.title('train and prediction data')
-        y = y[:, 0]           # children of BruteForce return a 2D array 
+        y = y.T[0]            # children of BruteForce return a 2D array 
         plt.plot(X, Y, label='train')
         plt.plot(x, y_tru, ':', label='true')
         plt.plot(x, y, label='pred')
