@@ -282,10 +282,10 @@ def update_errors(metrics: Dict[str, Any],
         
     if kwargs.get('plot', False):
         plt.title('Reference vs prediction')
-        plt.xlabel('$X$')
-        plt.ylabel('$y, Y$')
-        plt.plot(X.reshape(-1), Y.reshape(-1), label='ref $Y$')
-        plt.plot(X.reshape(-1), y.reshape(-1), label='pred $y$')
+        plt.xlabel('X')
+        plt.ylabel('y, Y')
+        plt.plot(X.reshape(-1), Y.reshape(-1), label='ref Y')
+        plt.plot(X.reshape(-1), y.reshape(-1), label='pred y')
         plt.plot(X.reshape(-1)[i_abs], Y.reshape(-1)[i_abs], 'o', 
                  label='max err')
         plt.grid()
@@ -293,9 +293,9 @@ def update_errors(metrics: Dict[str, Any],
         plt.show()
 
         plt.title('Maximum absolute error')
-        plt.xlabel('$X$')
-        plt.ylabel('$y - Y$')
-        plt.plot(X.reshape(-1), (y - Y).reshape(-1), label='$y-Y$')
+        plt.xlabel('X')
+        plt.ylabel('y - Y')
+        plt.plot(X.reshape(-1), (y - Y).reshape(-1), label='y-Y')
         plt.plot(X.reshape(-1)[i_abs], (y - Y).reshape(-1)[i_abs], 
                  'o', label='max abs')
         plt.grid()

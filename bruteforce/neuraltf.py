@@ -163,7 +163,7 @@ class Neural(BruteForce):
         See super()._get_trainer_pool()
         """
         trainer_pool = {
-                        # 'adadelta': Adadelta,
+                        # 'adadelta': Adadelta,  
                         # 'adagrad': Adagrad,
                         'adam': Adam,
                         'adamax': Adamax,
