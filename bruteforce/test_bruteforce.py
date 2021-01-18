@@ -47,12 +47,9 @@ class TestUM(unittest.TestCase):
         pass
 
     def test1(self):
-        s = 'Example 6'
-        print('-' * len(s) + '\n' + s + '\n' + '-' * len(s))
-
-        N = 1000                # number of training sets
-        n = np.round(1.4 * N)  # number of test sets
-        nse = 5e-2             # noise relative to x-value
+        N = 1000                               # number of training sets
+        n = np.round(1.4 * N)                      # number of test sets
+        nse = 5e-2                           # noise relative to x-value
         
         X = np.linspace(-2. * np.pi, 2. * np.pi, N).reshape(-1, 1)
         dx = 0.25 * (X.max() - X.min())
@@ -71,21 +68,23 @@ class TestUM(unittest.TestCase):
                 NeuralTf,
                 ]:
             phi = backend()
-            y = phi(X=X, Y=Y, x=x,
-                activation=('leaky', 'elu',) 
-                    if phi._backend == 'tensorflow' else 'sigmoid',
+            y = phi(X=X, Y=Y,                # training input and target 
+                    x=x,                              # prediction input
+                activation=('leaky',)  # 'elu',) 
+                    if phi.backend == 'tensorflow' else 'sigmoid',
                 epochs=150,
-                expected=1e-3 if phi._backend == 'tensorflow' else 1e-3,
+                expected=1e-3 if phi.backend == 'tensorflow' else 1e-3,
+                                                          # expected MSE
                 learning_rate=0.1,            # tensorflow learning rate
                 neurons=[[i]*j for i in range(4, 4+1)       # i: neurons  
-                               for j in range(4, 4+1)],       # j: layer
+                               for j in range(2, 2+1)],       # j: layer
                 output='linear',   # activation function of output layer
-                patience=10,      # delay of tensorflow's early stopping
+                patience=10,           # tensorflow early stopping delay
                 plot=1,           # 0: none, 1: final only, 2: all plots 
                 rr=0.1,                   # neurolab:bfgs regularization
-                show=1,
+                show=1,                        # neurolab plot frequence
                 tolerated=5e-3,                          # tolerated MSE
-                trainer='adam' if phi._backend == 'tensorflow' else 'bfgs',
+                trainer='adam' if phi.backend == 'tensorflow' else 'bfgs',
                 trials=5,   # repetition of every training configuration 
                 )
             
@@ -93,6 +92,7 @@ class TestUM(unittest.TestCase):
                 print('??? y is None -> training failed')
             
         plt.title('train and prediction data')
+        y = y[:, 0]
         plt.plot(X, Y, label='train')
         plt.plot(x, y_tru, ':', label='true')
         plt.plot(x, y, label='pred')
