@@ -31,7 +31,7 @@ _test_bruteforce.py_ is an example for using the backends TensorFlow and NeuroLa
 
         N = 1000                    # number of training sets
         n = int(np.round(1.4 * N))  # number of test sets
-        nse = 5e-2                  # noise relative to x-value
+        nse = 5e-2                  # noise
         
         X = np.linspace(-2. * np.pi, 2. * np.pi, N).reshape(-1, 1)
         dx = 0.25 * (X.max() - X.min())
