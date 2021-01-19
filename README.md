@@ -22,7 +22,7 @@ Class _BruteForce_ in module _bruteforce_ performes nested search loops over sel
 
 ###### Figure 1: Loops (MSE: mean squared error)
 
-The choice of the best configuration is based on the mean squared error, see module _metrics_.  _BruteForce_ uses different backends (e.g. TensorFlow, NeuroLab). The library specific functions are implemented in the children of class _BruteForce_:
+The choice of the best configuration is based on the mean squared error, see module _metrics_.  _BruteForce_ uses different backends (e.g. TensorFlow, NeuroLab). Library specific functionality is implemented in the children of class _BruteForce_:
 - Class _NeuralTf_: Tensorflow/Keras variant
 - Class _NeuralNl_: Neurolab variant
 
