@@ -26,8 +26,6 @@ The choice of the best configuration is based on the mean squared error, see mod
 - Class _NeuralTf_: Tensorflow/Keras variant
 - Class _NeuralNl_: Neurolab variant
 
-_BruteForce_ is only dependent on the files stored in the code directory of this repository.
-
 ### Example
 _test_bruteforce.py_ is an example for using the backends TensorFlow and NeuroLab for a simple regression problem in 1D space.  
 
