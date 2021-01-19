@@ -29,9 +29,9 @@ The choice of the best configuration is based on the mean squared error, see mod
 ### Example
 _test_bruteforce.py_ is an example for using the backends TensorFlow and NeuroLab for a simple regression problem in 1D space.  
 
-        N = 1000                # number of training sets
-        n = np.round(1.4 * N)  # number of test sets
-        nse = 5e-2             # noise relative to x-value
+        N = 1000                    # number of training sets
+        n = int(np.round(1.4 * N))  # number of test sets
+        nse = 5e-2                  # noise relative to x-value
         
         X = np.linspace(-2. * np.pi, 2. * np.pi, N).reshape(-1, 1)
         dx = 0.25 * (X.max() - X.min())
