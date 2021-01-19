@@ -92,7 +92,7 @@ The resulting errorbars are summarized in Figure 5.
 
 ###### Figure 5: Errorbars of all trials
 
-It is obvious that a single training is risky, see MSE of training with _leakyrelu_ in Figure 5. The first trial (#1) fails perfectly. 
+It is obvious that a single training is risky, see MSE of training with _leakyrelu_ in Figure 5. The first trial (#0) fails perfectly. 
 
 Therefore a required minimum number of 3 repetitions is advised. The summary of multiple variations of all parameter ranges is the recommendation of 5 repetitions which represents the economic optimum with regard to computational costs and reliability.
 
