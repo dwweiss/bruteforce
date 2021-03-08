@@ -102,7 +102,7 @@ This real-world example with 6 input, 1 output and 1503 data points is taken fro
 
 https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise
 
-Each of the 5 hidden layers contain 8 neurons. The trainer is _adam_, the types of activation of hidden layers were: (_elu_, _leakyrelu_, _sigmoid_) and every confguration was repeated 5 times.   
+Each of the 5 hidden layers contain 8 neurons. The trainer is _adam_, the types of activation of hidden layers were: (_elu_, _leakyrelu_, _sigmoid_) and every configuration was repeated 5 times.   
 
 Figure 6 shows the history of the mean squared error of all trials for the TensorFlow backend. 
 
@@ -122,9 +122,11 @@ Also here a single training should be seen as risky, see MSE of training with hi
 
 ### Conclusion
 
-The required number of training repetitions is highly problem-specific in regression analysis of measurements. There are both examples were a single training is sufficient and examples were multiple training trials are definitely needed. Single training of a network configuration on a new dataset can represent a substantial risk of missing an acceptable solution. A preference of a particular trainer or activation of the hidden layers has not been found.
+The required number of training repetitions is highly problem-specific in regression analysis of measurements. There are both examples were a single training is sufficient and examples were multiple training trials are definitely needed. 
 
-The conclusion is the recommendation of 3-5 repetitions of the random initialization of weights for each network configuration.
+Single training of a network configuration on a new dataset can represent a substantial risk of missing an acceptable solution. A preference of a particular trainer or activation of the hidden layers has not been found. Brute force scanning of the network parameters is therefore recommended.
+
+The conclusion is the need of 3-5 repetitions of the random initialization of weights for each network configuration if unknown data sets are analyzed. 
 
 ### Installation
 
