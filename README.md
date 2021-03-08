@@ -119,7 +119,7 @@ The resulting errorbars are summarized in Figure 7.
 
 ###### Figure 7: Errorbars of all trials
 
-Also here a single training should be seen as risky, see MSE of training with hidden neuron activation _sigmoid_ in Figure 6. The first trial (#0) with _sigmoid_ fails perfectly. The influence of the choice of the activation function is minor. The assumption of a required minimum number of 3 repetitions has been confirmed. 
+Also here a single training should be seen as risky, see MSE of training with hidden neuron activation _sigmoid_ in Figure 6. The first trial (#0) with _sigmoid_ fails. The influence of the choice of the activation function is minor, but there is an indication that the MSE variation with activation _leakyrelu_ is less than the MSE variation with the other activation functions. The recommended minimum number of repetitions is 3. 
 
 
 ### Installation
