@@ -72,7 +72,7 @@ The training data and the true values are plotted in Figure 2.
 ###### Figure 2: Training data and true values without noise
 
 
-Figure 3 shows the history of the means squared error of all trials for the TensorFlow backend. 
+Figure 3 shows the history of the mean squared error of all trials for the TensorFlow backend. 
 
 ![history_all](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_history1_all.png)
 
@@ -100,12 +100,13 @@ Therefore a required minimum number of 3 repetitions is advised. The summary of 
 
 ### Example: UIC airfoil + noise dataset
 
-This real-world example is taken from the UIC database:
+This real-world example with 6 input, 1 output and 1503 data points is taken from the UIC database:
 
 https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise
 
+Each of the 5 hidden layers contain 8 neurons. The trainer is adam, the types of activation of hidden layers were: (elu, leaky relu, sigmoid) and every confguration was repeated 5 times.   
 
-Figure 6 shows the history of the means squared error of all trials for the TensorFlow backend. 
+Figure 6 shows the history of the mean squared error of all trials for the TensorFlow backend. 
 
 ![history_all](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_history_uic_airfoil.png)
 
