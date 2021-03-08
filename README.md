@@ -122,9 +122,9 @@ Also here a single training should be seen as risky, see MSE of training with hi
 
 ### Conclusion
 
-The required number of training repetitions is highly problem-specific in regression analysis of measurements. There are both examples were a single training is sufficient and examples were multiple training trials are definitely needed. Single training of a network configuration on a new dataset represents a risk of training failure. A preference of a particular trainer or activation of the hidden layers for removing the MSE variation has not been found.
+The required number of training repetitions is highly problem-specific in regression analysis of measurements. There are both examples were a single training is sufficient and examples were multiple training trials are definitely needed. Single training of a network configuration on a new dataset can represent a substantial risk of missing an acceptable solution. A preference of a particular trainer or activation of the hidden layers for removing the MSE variation has not been found.
 
-The outcome of multiple variations of all parameter ranges is the recommendation of 3-5 repetitions per configuration. 
+The conclusion is the recommendation of 3-5 repetitions of the random initialization of weights for each network configuration.
 
 ### Installation
 
