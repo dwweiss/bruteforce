@@ -124,7 +124,7 @@ A single training is risky, see MSE of training with hidden neuron activation _s
 
 The required number of training repetitions is highly problem-specific in regression analysis of measurements. There are both examples were a single training is sufficient and examples were multiple random initializations of the network weights are definitely needed. Single training of a network configuration on a new dataset can represent a substantial risk of missing an acceptable solution. 
 
-A preference of a particular trainer or activation of the hidden layers for minimizing the MSE variation of multiple trials has not been found. Brute force scanning of the network parameter space is therefore recommended. The random initialization of weights for each network configuration should be repeated 3-5 times. 
+A preference of a particular trainer or activation of the hidden layers for minimizing the MSE variation of multiple trials has not been identified. Brute force scanning of the network parameter space is therefore recommended. The random initialization of weights for each network configuration should be repeated 3-5 times. 
 
 
 ### Installation
