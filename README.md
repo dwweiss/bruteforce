@@ -92,9 +92,7 @@ The resulting errorbars are summarized in Figure 5.
 
 ###### Figure 5: Errorbars of all trials
 
-It is obvious that a single training is risky, see MSE of training with _leakyrelu_ in Figure 5. The first trial (#0) fails perfectly. 
-
-Therefore a required minimum number of 3 repetitions is advised. The summary of multiple variations of all parameter ranges is the recommendation of 5 repetitions which represents the economic optimum with regard to computational costs and reliability.
+It is obvious that a single training is risky, see MSE of training with _leakyrelu_ in Figure 5. The first trial (#0) fails perfectly. Therefore a required minimum number of 3 repetitions is advised.
 
 
 
@@ -121,6 +119,12 @@ The resulting errorbars are summarized in Figure 7.
 
 Also here a single training should be seen as risky, see MSE of training with hidden neuron activation _sigmoid_ in Figure 6. The first trial (#0) with _sigmoid_ fails. The influence of the choice of the activation function is little, but there is an indication that the MSE variation with activation _leakyrelu_ is less than the variation with the other activation functions. In contrast, the sine curve example has indicated that _leakyrelu_ is not the best choice. The recommended minimum number of repetitions is 3. 
 
+
+### Conclusion
+
+The required number of training repetitions is highly problem-specific in regression analysis of measurements. There are both examples were a single training is sufficient and examples were multiple training trials are definitely needed. Single training of a network configuration on a new dataset represents a risk of training failure. A preference of a particular trainer or activation of the hidden layers for removing the MSE variation has not been found.
+
+The outcome of multiple variations of all parameter ranges is the recommendation of 3-5 repetitions per configuration. 
 
 ### Installation
 
