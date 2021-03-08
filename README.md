@@ -27,7 +27,7 @@ The choice of the best configuration is based on the mean squared error, see mod
 - Class _NeuralNl_: Neurolab variant
 
 ### Example: Sine curve
-_test_bruteforce.py_ is an example for using the backends TensorFlow and NeuroLab for a simple regression problem in 1D space.  
+_test_bruteforce.py_ is an example using synthetic data in 1D space with the backends TensorFlow and NeuroLab.  
 
         N = 1000                    # number of training sets
         n = int(np.round(1.4 * N))  # number of test sets
