@@ -126,7 +126,7 @@ The required number of training repetitions is highly problem-specific in regres
 
 Single training of a network configuration on a new dataset can represent a substantial risk of missing an acceptable solution. A preference of a particular trainer or activation of the hidden layers has not been found. Brute force scanning of the network parameters is therefore recommended.
 
-The conclusion is the need of 3-5 repetitions of the random initialization of weights for each network configuration if unknown data sets are analyzed. 
+The conclusion is the need of 3-5 repetitions of the random initialization of weights for each network configuration in case of new data sets. 
 
 ### Installation
 
