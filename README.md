@@ -104,7 +104,7 @@ This real-world example with 6 input, 1 output and 1503 data points is taken fro
 
 https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise
 
-Each of the 5 hidden layers contain 8 neurons. The trainer is adam, the types of activation of hidden layers were: (elu, leaky relu, sigmoid) and every confguration was repeated 5 times.   
+Each of the 5 hidden layers contain 8 neurons. The trainer is _adam_, the types of activation of hidden layers were: (_elu_, _leakyrelu_, _sigmoid_) and every confguration was repeated 5 times.   
 
 Figure 6 shows the history of the mean squared error of all trials for the TensorFlow backend. 
 
@@ -119,8 +119,9 @@ The resulting errorbars are summarized in Figure 7.
 
 ###### Figure 7: Errorbars of all trials
 
+Also here a single training should be seen as risky, see MSE of training with hidden neuron activation _sigmoid_ in Figure 6. The first trial (#0) with _sigmoid_ fails perfectly.
 
-
+The assumption of a required minimum number of 3 repetitions is confirmed. 
 
 
 ### Installation
