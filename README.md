@@ -26,7 +26,7 @@ The choice of the best configuration is based on the mean squared error, see mod
 - Class _NeuralTf_: Tensorflow/Keras variant
 - Class _NeuralNl_: Neurolab variant
 
-### Example
+### Example: Sine curve
 _test_bruteforce.py_ is an example for using the backends TensorFlow and NeuroLab for a simple regression problem in 1D space.  
 
         N = 1000                    # number of training sets
@@ -95,6 +95,31 @@ The resulting errorbars are summarized in Figure 5.
 It is obvious that a single training is risky, see MSE of training with _leakyrelu_ in Figure 5. The first trial (#0) fails perfectly. 
 
 Therefore a required minimum number of 3 repetitions is advised. The summary of multiple variations of all parameter ranges is the recommendation of 5 repetitions which represents the economic optimum with regard to computational costs and reliability.
+
+
+
+### Example: UIC airfoil + noise dataset
+
+This real-world example is taken from the UIC database:
+
+https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise
+
+
+Figure 6 shows the history of the means squared error of all trials for the TensorFlow backend. 
+
+![history_all](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_history_uic_airfoil.png)
+
+###### Figure 6: Mean squared error history of all trials
+
+
+The resulting errorbars are summarized in Figure 7. 
+
+![MSE_history_all](https://github.com/dwweiss/bruteforce/blob/main/bruteforce/doc/fig/bruteforce_errorbars_uic_airfoil.png)
+
+###### Figure 7: Errorbars of all trials
+
+
+
 
 
 ### Installation
